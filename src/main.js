@@ -7,7 +7,7 @@ const app = createApp(App);
 
 // Configura axios globalmente
 app.config.globalProperties.$http = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: 'https://mytoriasback-production.up.railway.app/api',
 });
 
 app.mount('#app');
