@@ -25,6 +25,7 @@ export default {
         const response = await this.$http.get('/talentos', {
           params: filters
         });
+        console.log(response);
         this.talentos = response.data;
       } catch (error) {
         console.error('Error al obtener talentos:', error);
