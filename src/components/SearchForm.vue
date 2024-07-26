@@ -69,8 +69,8 @@ export default {
         }
       } else {
         const index = this.filters.clases.indexOf('All');
-        if (index === -1) {
-          this.filters.clases.unshift('All');
+        if (index !== -1) {
+          this.filters.clases.splice(index, 1);
         }
       }
     },
