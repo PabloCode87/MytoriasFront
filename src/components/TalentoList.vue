@@ -11,7 +11,7 @@
             <h3 class="card-title"><strong>{{ talento.nombre }}</strong></h3>
             <p class="card-text"><strong>Tier:</strong> {{ talento.tier }}</p>
             <p class="card-text"><strong>Ranked:</strong> {{ talento.ranked ? 'Sí' : 'No' }}</p>
-            <p class="card-text"><strong>Clases:</strong> {{ talento.clases.join(', ') }}</p>
+            <p class="card-text"><strong>Clases:</strong> {{ (talento.clases || []).join(', ') }}</p>
             <p class="card-text"><strong>Descripción:</strong> {{ talento.descripcion }}</p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-.container{
+.container {
   background-color: #f4ecd800;
 }
 
@@ -41,13 +41,13 @@ export default {
   border: 1px solid #f4ecd8;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
 }
-h2{
+h2 {
   color: #fff4df;
 }
 .card-title, .card-text {
   color: #424242;
 }
-.card-title{
+.card-title {
   text-shadow: 0 0px 1px rgb(5, 5, 5);
 }
 </style>
